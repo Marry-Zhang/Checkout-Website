@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='checkout.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Checkout</title>
+</head>
+
+<body>
+    
+    <div id="cart">
+	<h2>Thank you for shopping with us :) </h2>
+    
+    <hr id="seperator">
+    
+    <div id="cart_items">
+
+		<div class='container'>     
+			<div class='item' id="name">
+				Item
+			</div>            
+            
+            <div class='item' id="quantity">
+				#
+            </div>
+
+            <div class='item' id="price">
+				Price
+            </div>
+
+            <div class='item' id="tax_rate">
+				Tax
+            </div>
+        </div>
+
+         {% if (cart|length)==0 %}
+         <p>Empty cart! Go back to shop!</p>
+         {% endif %}
+
+        {% for item in cart %}
+        <div class='container'>            
+            
+			<div class='item' id="name">
+				<span id="itemNameTag">{{item['item_name']}}</span><br>
+			</div>            
+            
+            <div class='item' id="quantity">
+				{{item['cart_quantity']}}
+            </div>
+
+            <div class='item' id="price">
+               {% set sub = item['item_price'] * item['cart_quantity'] * (1-item['discount']) %}
+               ${{'%0.2f' %  sub|float}}
+            </div>
+
+            <div class='item' id="tax_rate">
+				{{item['tax_rate']}}
+            </div>
+        
+        </div>
+        {% endfor %}
+
+        <hr id="seperator">
+
+		<div id="subtotal">
+            <div id="sub_total">
+				<h3>Subtotal : </h3> 
+            </div>
+
+			   <div id="sub_price">
+				<span>Original Price : </span> ${{sub_price}}
+            </div>
+
+            <div id="discount">
+               <span>You saved : </span> ${{discount}}
+            </div>
+            
+            <div id="tax">
+				<span>Tax : </span> ${{tax}}
+            </div>
+        </div>
+        
+        <hr id="seperator">
+
+        <div id="total">
+			<div id="total_price"><h3>Total price : ${{total_price}} </h3>
+        </div>
+      <hr id="seperator">
+      
+      <div class="button_box">
+         <form action="" method="post">
+         <input type="submit" name="submit" value="New Cart" class="btn btn-dark" >
+         <a href = "{{url_for('shopping_cart')}}" class="btn btn-outline-dark btn-lg">Go Back</a>
+         </form>
+         
+         
+      </div>
+      
+      
+      
+         
+
+	</div>
+</div>
+</body>
+</html>

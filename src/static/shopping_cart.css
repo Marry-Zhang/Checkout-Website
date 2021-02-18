@@ -1,0 +1,61 @@
+h1{
+  padding-top: 100px;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-size: 40px;
+  margin-left: 60px;
+}
+
+p{
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-size: 22px;
+}
+
+.box{
+  float: left;
+  width: 45%;
+  padding: 10px;
+}
+
+.item-selection{
+  padding: 20px;
+  border: solid black;
+  border-radius: 10px;
+  margin-left: 35px;
+  padding-bottom: 60px;
+}
+
+.my-cart{
+  padding: 20px;
+  padding-left: 40px;
+}
+
+
+table th, table td {
+  font-family: 'Nunito', sans-serif;
+  color: black;
+}
+
+table th {
+  background-color: black;
+  height: 40px;
+  color: white;
+}
+
+body{
+  width: 80%;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+.box {
+  width: 100%;
+}
+}
+ 

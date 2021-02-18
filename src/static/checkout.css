@@ -1,0 +1,80 @@
+h1{
+  padding-top: 100px;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-size: 40px;
+  margin-left: 60px;
+}
+
+p{
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-size: 22px;
+  text-align: center;
+}
+
+.box{
+  float: left;
+  width: 45%;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.button_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  border:1px solid black;
+  margin:0%;
+  width: 15%;
+  height: 50px;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+body{
+  width: 80%;
+  margin: 0;
+  padding: 0;
+}
+
+/*buttom*/
+button{
+  border: none;
+  text-align: center;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  background-color:#333;
+  padding: 15px 32px;
+  cursor: pointer;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+.box {
+  width: 100%;
+  
+}
+}
+ 
+div {
+  word-wrap: break-word;
+  word-break: break-all;
+}
