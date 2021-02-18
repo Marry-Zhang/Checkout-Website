@@ -1,5 +1,4 @@
-# assignment-1-22-houte1998-marry-zhang
-assignment-1-22-houte1998-marry-zhang created by GitHub Classroom
+# Checkout Website
 
 This is a simple checkout website using HTML, CSS, Python Flask and SQLite database. 
 
